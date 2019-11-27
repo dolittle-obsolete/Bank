@@ -1,0 +1,14 @@
+{
+  "modules": {},
+  "features": {
+    "3ddba064-6a0d-438f-af2c-62ebb51f2513": {
+      "name": "MyBC1",
+      "subFeatures": {
+        "4d8de0bc-06f8-4f08-9eb1-50828620d9fe": {
+          "name": "Accounts",
+          "subFeatures": {}
+        }
+      }
+    }
+  }
+}

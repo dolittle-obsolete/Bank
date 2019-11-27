@@ -1,0 +1,26 @@
+{
+    "application": "60185b06-1d44-885a-f642-f48bfaf9700e",
+    "boundedContext": "beaf9c2d-d95f-9168-64ef-22e67c3d0bcd",
+    "boundedContextName": "Banking",
+    "resources": {
+        "readModels": {
+            "development": "MongoDB",
+            "production": "MongoDB"
+        },
+        "eventStore": {
+            "development": "MongoDB",
+            "production": "MongoDB"
+        }
+    },
+    "core": {
+        "language": "csharp"
+    },
+    "interaction": [
+        {
+            "type": "interaction",
+            "language": "javascript",
+            "framework": "aurelia",
+            "entryPoint": "Web"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "application": "60185b06-1d44-885a-f642-f48bfaf9700e",
+    "boundedContext": "b292fddd-d1a7-3dda-ddee-5df2a671195c",
+    "boundedContextName": "MyBC2",
+    "resources": {
+        "readModels": {
+            "development": "MongoDB",
+            "production": "MongoDB"
+        },
+        "eventStore": {
+            "development": "EventStore",
+            "production": "EventStore"
+        }
+    },
+    "core": {
+        "language": "csharp"
+    },
+    "interaction": [
+        {
+            "type": "interaction",
+            "language": "javascript",
+            "framework": "aurelia",
+            "entryPoint": "Web"
+        }
+    ]
+}

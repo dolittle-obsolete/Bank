@@ -1,0 +1,14 @@
+{
+  "4d8de0bc-06f8-4f08-9eb1-50828620d9fe": {
+    "commands": {},
+    "events": {
+      "32ef580e-06fc-463b-b490-2b5e9adfd967": {
+        "generation": 1,
+        "type": "Events.MyBC1.Accounts.AccountOpened, Events.MyBC1"
+      }
+    },
+    "eventSources": {},
+    "readModels": {},
+    "queries": {}
+  }
+}

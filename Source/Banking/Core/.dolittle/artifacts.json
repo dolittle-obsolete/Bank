@@ -1,0 +1,70 @@
+{
+  "999923ff-659b-4598-a04f-cfb7b9a1c1f5": {
+    "commands": {
+      "78e16cae-18d2-4669-a14c-d63bc2079c60": {
+        "generation": 1,
+        "type": "Domain.Accounts.DepositMoneyToDebitAccount, Domain"
+      },
+      "8398bb60-5702-4620-8c2a-6806f1e10519": {
+        "generation": 1,
+        "type": "Domain.Accounts.OpenDebitAccount, Domain"
+      },
+      "46199284-038b-40f7-950a-e4696341271d": {
+        "generation": 1,
+        "type": "Domain.Accounts.TransferMoneyFromDebitAccount, Domain"
+      },
+      "358ef530-c378-4887-9cf7-3b774a219f05": {
+        "generation": 1,
+        "type": "Domain.Accounts.WithdrawMoneyFromDebitAccount, Domain"
+      }
+    },
+    "events": {
+      "46562c90-db14-4e7f-bc21-d27552baac20": {
+        "generation": 1,
+        "type": "Events.Accounts.BalanceChanged, Events"
+      },
+      "70a743d0-63df-4215-a44f-7915e835fcf8": {
+        "generation": 1,
+        "type": "Events.Accounts.DebitAccountOpened, Events"
+      },
+      "c170732b-5acd-4a5c-9706-818b8314ed0b": {
+        "generation": 1,
+        "type": "Events.Accounts.DepositPerformedToDebitAccount, Events"
+      },
+      "a4defe6d-de55-4206-8153-b9a84a4f6ebd": {
+        "generation": 1,
+        "type": "Events.Accounts.MoneyTransferredFromDebitAccount, Events"
+      },
+      "47889d73-bfaf-4f51-8d13-c411d579b27d": {
+        "generation": 1,
+        "type": "Events.Accounts.WithdrawalPerformedFromDebitAccount, Events"
+      }
+    },
+    "eventSources": {
+      "7812a1a5-c03e-48ad-9fcb-bf579dba5643": {
+        "generation": 1,
+        "type": "Domain.Accounts.DebitAccount, Domain"
+      },
+      "cfe1b500-6843-4df0-b0e3-491a96da61e0": {
+        "generation": 1,
+        "type": "Domain.Accounts.DebitAccounts, Domain"
+      }
+    },
+    "readModels": {
+      "87344b03-93a2-4ea8-b2bf-deb2250b3f9b": {
+        "generation": 1,
+        "type": "Read.Accounts.Account, Read"
+      },
+      "91589442-e9e6-4c5b-93d6-6d323496818e": {
+        "generation": 1,
+        "type": "Read.Accounts.AccountWithTransactions, Read"
+      }
+    },
+    "queries": {
+      "60e184d6-0e02-4fa3-bd9c-7a5667f843bc": {
+        "generation": 1,
+        "type": "Read.Accounts.AllAccounts, Read"
+      }
+    }
+  }
+}

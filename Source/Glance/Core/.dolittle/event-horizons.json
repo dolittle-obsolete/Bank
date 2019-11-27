@@ -1,0 +1,14 @@
+[
+    {
+        "application": "60185b06-1d44-885a-f642-f48bfaf9700e",
+        "boundedContext": "beaf9c2d-d95f-9168-64ef-22e67c3d0bcd",
+        "url": "localhost:50052",
+        "events": [
+            {
+                "id": "32ef580e-06fc-463b-b490-2b5e9adfd967",
+                "generation": 1
+            }
+        ]
+    }
+
+]
