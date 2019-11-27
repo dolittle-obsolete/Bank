@@ -23,7 +23,7 @@ namespace Domain.Accounts
 
         public void Withdraw(double amount)
         {
-            if( Evaluate(() => MustHaveSufficientFundsToWitdrawAmount(amount)))
+            if (Evaluate(() => MustHaveSufficientFundsToWitdrawAmount(amount)))
             {
                 var oldBalance = _balance;
                 Apply(new WithdrawalPerformedFromDebitAccount(amount));
@@ -31,12 +31,20 @@ namespace Domain.Accounts
             }
         }
 
+        public void DepositFromOtherAccount(AccountId from, double amount)
+        {
+            var oldBalance = _balance;
+            Apply(new DepositPerformedToDebitAccountFromOtherAccount(from, amount));
+            Apply(new BalanceChanged(oldBalance, _balance));
+        }
+
         public void Transfer(AccountId to, double amount)
         {
-            if( Evaluate(() => MustHaveSufficientFundsToWitdrawAmount(amount)))
+            if (Evaluate(() => MustHaveSufficientFundsToWitdrawAmount(amount)))
             {
                 var oldBalance = _balance;
                 Apply(new MoneyTransferredFromDebitAccount(to, amount));
+                Apply(new BalanceChanged(oldBalance, _balance));
                 Apply(new BalanceChanged(oldBalance, _balance));
             }
         }
@@ -44,11 +52,16 @@ namespace Domain.Accounts
         RuleEvaluationResult MustHaveSufficientFundsToWitdrawAmount(double amount)
         {
             var newBalance = _balance - amount;
-            if( newBalance < 0 ) return RuleEvaluationResult.Fail(amount, InsufficientFunds.WithArgs(EventSourceId));
+            if (newBalance < 0) return RuleEvaluationResult.Fail(amount, InsufficientFunds.WithArgs(EventSourceId));
             return RuleEvaluationResult.Success;
         }
 
         void On(DepositPerformedToDebitAccount deposit)
+        {
+            _balance += deposit.Amount;
+        }
+
+        void On(DepositPerformedToDebitAccountFromOtherAccount deposit)
         {
             _balance += deposit.Amount;
         }

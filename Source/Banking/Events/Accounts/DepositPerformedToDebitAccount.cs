@@ -11,4 +11,5 @@ namespace Events.Accounts
 
         public double Amount { get; }
     }
+
 }

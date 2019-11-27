@@ -33,7 +33,7 @@
     <ProjectReference Include="..\Domain\Domain.csproj" />
     <ProjectReference Include="..\Events\Events.csproj" />
     <ProjectReference Include="..\Read\Read.csproj" />
-    <ProjectReference Include="..\Policies\Policies.csproj" />
+    <ProjectReference Include="..\Decisions\Decisions.csproj" />
     <ProjectReference Include="..\Rules\Rules.csproj" />
   </ItemGroup>
 

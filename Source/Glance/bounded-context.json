@@ -8,8 +8,8 @@
             "production": "MongoDB"
         },
         "eventStore": {
-            "development": "EventStore",
-            "production": "EventStore"
+            "development": "MongoDB",
+            "production": "MongoDB"
         }
     },
     "core": {

@@ -13,9 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Specs", "Domain.Spec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events", "Events\Events.csproj", "{BCB881B8-91CC-48AA-92F7-CF9CE8630573}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Policies", "Policies\Policies.csproj", "{4BAA3E2F-F48F-4D15-8C30-AC21FB13600D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decisions", "Decisions\Decisions.csproj", "{4BAA3E2F-F48F-4D15-8C30-AC21FB13600D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Policies.Specs", "Policies.Specs\Policies.Specs.csproj", "{5A2AB95A-3C7F-4EDF-BA4C-C4D2486D10AD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decisions.Specs", "Decisions.Specs\Decisions.Specs.csproj", "{5A2AB95A-3C7F-4EDF-BA4C-C4D2486D10AD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Read", "Read\Read.csproj", "{3BA3F62A-DD53-4EF2-8D3A-50400DF9FD99}"
 EndProject

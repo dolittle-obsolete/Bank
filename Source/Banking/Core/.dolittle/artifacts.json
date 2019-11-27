@@ -38,6 +38,10 @@
       "47889d73-bfaf-4f51-8d13-c411d579b27d": {
         "generation": 1,
         "type": "Events.Accounts.WithdrawalPerformedFromDebitAccount, Events"
+      },
+      "75a3db40-490b-468f-916a-ad3b9682c7a0": {
+        "generation": 1,
+        "type": "Events.Accounts.DepositPerformedToDebitAccountFromOtherAccount, Events"
       }
     },
     "eventSources": {
@@ -58,12 +62,24 @@
       "91589442-e9e6-4c5b-93d6-6d323496818e": {
         "generation": 1,
         "type": "Read.Accounts.AccountWithTransactions, Read"
+      },
+      "1f00a16e-3f28-4b7f-b7af-821a2864cae1": {
+        "generation": 1,
+        "type": "Read.Accounts.Transaction, Read"
       }
     },
     "queries": {
       "60e184d6-0e02-4fa3-bd9c-7a5667f843bc": {
         "generation": 1,
         "type": "Read.Accounts.AllAccounts, Read"
+      },
+      "a81e3f58-d60d-445f-adfe-2077cc8fa4ce": {
+        "generation": 1,
+        "type": "Read.Accounts.AllDebitAccounts, Read"
+      },
+      "a15ee2b9-13c3-4083-88e3-903037474e52": {
+        "generation": 1,
+        "type": "Read.Accounts.TransactionsForAccount, Read"
       }
     }
   }
