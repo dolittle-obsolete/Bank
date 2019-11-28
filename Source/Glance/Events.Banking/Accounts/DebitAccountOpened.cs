@@ -1,4 +1,5 @@
-﻿using Dolittle.Artifacts;
+﻿using System;
+using Dolittle.Artifacts;
 using Dolittle.Events;
 
 namespace Events.Banking.Accounts

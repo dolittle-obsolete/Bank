@@ -1,5 +1,6 @@
 using System;
 using Dolittle.Events;
+using Dolittle.Artifacts;
 
 namespace Events.Banking.Accounts
 {

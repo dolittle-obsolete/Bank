@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rules", "Rules\Rules.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rules.Specs", "Rules.Specs\Rules.Specs.csproj", "{550DA735-9A42-4670-99EA-357F278BB3FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events.MyBC1", "Events.MyBC1\Events.MyBC1.csproj", "{0AEB3C92-BF07-4FA9-B304-844A7E25BD37}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events.Banking", "Events.Banking\Events.Banking.csproj", "{0AEB3C92-BF07-4FA9-B304-844A7E25BD37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

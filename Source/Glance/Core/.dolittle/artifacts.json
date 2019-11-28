@@ -2,13 +2,34 @@
   "4d8de0bc-06f8-4f08-9eb1-50828620d9fe": {
     "commands": {},
     "events": {
-      "32ef580e-06fc-463b-b490-2b5e9adfd967": {
+      "46562c90-db14-4e7f-bc21-d27552baac20": {
         "generation": 1,
-        "type": "Events.MyBC1.Accounts.AccountOpened, Events.MyBC1"
+        "type": "Events.Banking.Accounts.BalanceChanged, Events.Banking"
+      },
+      "70a743d0-63df-4215-a44f-7915e835fcf8": {
+        "generation": 1,
+        "type": "Events.Banking.Accounts.DebitAccountOpened, Events.Banking"
       }
     },
     "eventSources": {},
     "readModels": {},
     "queries": {}
+  },
+  "ce98c57c-660c-430c-81c3-2c2feb68b269": {
+    "commands": {},
+    "events": {},
+    "eventSources": {},
+    "readModels": {
+      "3b6d847a-45c7-4381-a53a-df6b29be1556": {
+        "generation": 1,
+        "type": "Read.Accounts.Account, Read"
+      }
+    },
+    "queries": {
+      "d5c8e68d-faf4-45da-816e-005b5c5f8e8b": {
+        "generation": 1,
+        "type": "Read.Accounts.AllAccounts, Read"
+      }
+    }
   }
 }

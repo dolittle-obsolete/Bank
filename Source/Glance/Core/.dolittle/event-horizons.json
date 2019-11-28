@@ -5,9 +5,13 @@
         "url": "localhost:50052",
         "events": [
             {
-                "id": "32ef580e-06fc-463b-b490-2b5e9adfd967",
+                "id": "46562c90-db14-4e7f-bc21-d27552baac20",
                 "generation": 1
-            }
+            },
+            {
+                "id": "70a743d0-63df-4215-a44f-7915e835fcf8",
+                "generation": 1
+            }           
         ]
     }
 
