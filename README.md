@@ -5,7 +5,7 @@ Presentation can be found [here](https://1drv.ms/p/s!AhD7O7za4wxGgcV7820oWophkxS
 
 ## Application
 
-The application consists of 2 microservices; MyBC1 and MyBC2. They are configured as follows:
+The application consists of 2 microservices; Banking and Glance. They are configured as follows:
 
 **Banking**
 
