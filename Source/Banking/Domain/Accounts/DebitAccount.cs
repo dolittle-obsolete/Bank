@@ -45,7 +45,6 @@ namespace Domain.Accounts
                 var oldBalance = _balance;
                 Apply(new MoneyTransferredFromDebitAccount(to, amount));
                 Apply(new BalanceChanged(oldBalance, _balance));
-                Apply(new BalanceChanged(oldBalance, _balance));
             }
         }
 

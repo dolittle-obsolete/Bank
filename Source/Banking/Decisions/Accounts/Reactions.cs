@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using Dolittle.Artifacts;
 using Dolittle.DependencyInversion;
 using Dolittle.Domain;
@@ -29,18 +30,24 @@ namespace Decisions.Accounts
         public void AggregateRoot<T>(Action<IAggregateOf<T>> callback)
             where T : class, IAggregateRoot
         {
-            var commandRequest = new CommandRequest(
-                _executionContextManager.Current.CorrelationId,
-                Artifact,
-                ArtifactGeneration.First,
-                new Dictionary<string, object>()
-            );
-
-            using (var commandContext = _commandContextManager.EstablishForCommand(commandRequest))
+            var thread = new Thread(() =>
             {
-                var aggregate = _container.Get<IAggregateOf<T>>();
-                callback(aggregate);
-            }
+                Thread.Sleep(500);
+                var commandRequest = new CommandRequest(
+                    _executionContextManager.Current.CorrelationId,
+                    Artifact,
+                    ArtifactGeneration.First,
+                    new Dictionary<string, object>()
+                );
+
+                using (_commandContextManager.EstablishForCommand(commandRequest))
+                {
+                    var aggregate = _container.Get<IAggregateOf<T>>();
+                    callback(aggregate);
+                }
+            });
+
+            thread.Start();
         }
     }
 }
