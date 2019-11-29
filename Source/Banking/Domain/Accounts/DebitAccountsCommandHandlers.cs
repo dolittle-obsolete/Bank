@@ -4,11 +4,11 @@ using Dolittle.Domain;
 
 namespace Domain.Accounts
 {
-    public class DebitAcountsCommandHandlers : ICanHandleCommands
+    public class DebitAccountsCommandHandlers : ICanHandleCommands
     {
         private readonly IAggregateOf<DebitAccounts> _debitAccounts;
 
-        public DebitAcountsCommandHandlers(IAggregateOf<DebitAccounts> debitAccounts)
+        public DebitAccountsCommandHandlers(IAggregateOf<DebitAccounts> debitAccounts)
         {
             _debitAccounts = debitAccounts;
         }
