@@ -74,7 +74,7 @@ The operation of opening the debit account is a command, and is represented by a
 [here](./Source/Banking/Domain/Accounts/OpenDebitAccount.cs). In order for it to be handled,
 it relies on it being valid - which is where the input validator for the command fits in, which
 is found [here](./Source/Banking/Domain/Accounts/OpenDebitAccountInputValidation.cs).
-Once its valid, we go on to the actual handling of the command, which is implemented [here](./Source/Banking/Domain/Accounts/DebitAccountsCommandHandler.cs).
+Once its valid, we go on to the actual handling of the command, which is implemented [here](./Source/Banking/Domain/Accounts/DebitAccountsCommandHandlers.cs).
 
 The command handler will then coordinate the effort of what it means by opening a debit account.
 It relies on what is called an [Aggregate Root](https://www.martinfowler.com/bliki/DDD_Aggregate.html)
