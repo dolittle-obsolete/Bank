@@ -85,7 +85,7 @@ Running the same command with the same properties on it, should therefor yield t
 
 ![](Images/open_debit_account_broken_rules.png)
 
-The event that gets produced from this is called [DebitAccountOpened](./Source/Banking/Events/DebitAccountOpened.cs).
+The event that gets produced from this is called [DebitAccountOpened](./Source/Banking/Events/Accounts/DebitAccountOpened.cs).
 From this event we typically keep an optimized read model for each feature that is interested in
 the event that is produced. Each feature has an opportunity to optimize this read model in any way they
 want and use any storage technology - or even multiple storage technologies for the same feature for
@@ -93,7 +93,7 @@ different purposes. This is possible due to the fact that the source of truth wi
 In fact, we can consider the read model a perfect cache, a current state.
 
 The event gets processed by an event processor, and the one dealing with the `DebitAccountOpened` event
-sits [here](./Source/Banking/Read/AccountEventProcessors.cs). What it does is basically create an instance
+sits [here](./Source/Banking/Read/Accounts/AccountEventProcessors.cs). What it does is basically create an instance
 of a read model with the unique identifier; `EventSourceId` that comes as the metadata associated with
 the event. Then it inserts this into the database; in our case a MongoDb instance.
 
@@ -108,7 +108,7 @@ Then execute the `Accounts/AllAccounts` query.
 
 ![](Images/all_accounts_query.png)
 
-The query itself is implemented [here](./Source/Banking/Read/AllAccounts.cs).
+The query itself is implemented [here](./Source/Banking/Read/Accounts/AllAccounts.cs).
 From the response, we're interested in the **Guid** of the debit account.
 Copy it from the response:
 
@@ -121,10 +121,10 @@ Navigate back to the **Commands** spec in the swagger UI:
 
 Open up the `Accounts/DepositMoneyToDebitAccount` command and insert the **Guid**
 into the **Account** property. Then put an amount in and execute it.
-The command can be found [here](./Source/Banking/Domain/DepositMoneyToDebitAccount.cs),
-its input validation is [here](./Source/Banking/Domain/DepositMoneyToDebitAccountInputValidation.cs)
-and handled by [this](./Source/Banking/Domain/DebitAccountCommandHandler.cs) command handler.
-Notice that it works with a different aggregate root; [DebitAccount](./Source/Banking/Domain/DebitAccount.cs);
+The command can be found [here](./Source/Banking/Domain/Accounts/DepositMoneyToDebitAccount.cs),
+its input validation is [here](./Source/Banking/Domain/Accounts/DepositMoneyToDebitAccountInputValidation.cs)
+and handled by [this](./Source/Banking/Domain/Accounts/DebitAccountCommandHandler.cs) command handler.
+Notice that it works with a different aggregate root; [DebitAccount](./Source/Banking/Domain/Accounts/DebitAccount.cs);
 singular. This aggregate will be responsible for all things important to an account, and governs
 all the rules for a single debit account.
 
