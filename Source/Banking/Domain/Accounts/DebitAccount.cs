@@ -51,7 +51,7 @@ namespace Domain.Accounts
         RuleEvaluationResult MustHaveSufficientFundsToWitdrawAmount(double amount)
         {
             var newBalance = _balance - amount;
-            if (newBalance < 0) return RuleEvaluationResult.Fail(amount, InsufficientFunds.WithArgs(EventSourceId));
+            if (newBalance < 0) return RuleEvaluationResult.Fail(amount, InsufficientFunds.WithArgs(new{Account=EventSourceId}));
             return RuleEvaluationResult.Success;
         }
 
