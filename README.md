@@ -110,7 +110,7 @@ The query itself is implemented [here](./Source/Banking/Read/AllAccounts.cs).
 From the response, we're interested in the **Guid** of the debit account.
 Copy it from the response:
 
-![](Images/all_accounts_query_response.png)
+![](Images/all_accounts_query_result.png)
 
 With the **Guid** of the debit account, we can now deposit money to it.
 Navigate back to the **Commands** spec in the swagger UI:
