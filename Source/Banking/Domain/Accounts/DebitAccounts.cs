@@ -9,9 +9,8 @@ namespace Domain.Accounts
 {
     public class DebitAccounts : AggregateRoot
     {
-        List<string>    _accounts = new List<string>();
-
         static Reason AccountNameAlreadyExists = Reason.Create("cd13df2e-daad-4f5b-9bee-2fff38baec21", "Account with {Name} already exists");
+        readonly List<string>    _accounts = new List<string>();
 
         public DebitAccounts(EventSourceId eventSourceId) : base(eventSourceId) { }
 
