@@ -7,14 +7,13 @@ Presentation can be found [here](https://1drv.ms/p/s!AhD7O7za4wxGgcV7820oWophkxS
 
 The application consists of 2 microservices; Banking and Glance. They are configured as follows:
 
-**Banking**
+### Banking
 
 Backend: http://localhost:5000
 
 Frontend: http://localhost:8080
 
-
-**Glance**
+### Glance
 
 Backend: http://localhost:5001
 
