@@ -11,7 +11,7 @@ namespace Domain.Accounts
     {
         List<string>    _accounts = new List<string>();
 
-        static Reason AccountNameAlreadyExists = Reason.Create("cd13df2e-daad-4f5b-9bee-2fff38baec21", "Acount with {Name} already exists");
+        static Reason AccountNameAlreadyExists = Reason.Create("cd13df2e-daad-4f5b-9bee-2fff38baec21", "Account with {Name} already exists");
 
         public DebitAccounts(EventSourceId eventSourceId) : base(eventSourceId) { }
 
