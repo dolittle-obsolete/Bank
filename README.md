@@ -1,7 +1,7 @@
-# Sample of Dolittle from the ground up
+# Simple Bank Sample using Dolittle
 
-Documentation for Dolittle can be found [here](https://dolittle.io).
-Presentation can be found [here](https://1drv.ms/p/s!AhD7O7za4wxGgcV7820oWophkxSpJA).
+This sample shows a simple bank sample and how you could build it using
+Dolittle. Documentation for Dolittle can be found [here](https://dolittle.io).
 
 ## Application
 
