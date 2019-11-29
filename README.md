@@ -123,7 +123,7 @@ Open up the `Accounts/DepositMoneyToDebitAccount` command and insert the **Guid*
 into the **Account** property. Then put an amount in and execute it.
 The command can be found [here](./Source/Banking/Domain/Accounts/DepositMoneyToDebitAccount.cs),
 its input validation is [here](./Source/Banking/Domain/Accounts/DepositMoneyToDebitAccountInputValidation.cs)
-and handled by [this](./Source/Banking/Domain/Accounts/DebitAccountCommandHandler.cs) command handler.
+and handled by [this](./Source/Banking/Domain/Accounts/DebitAccountCommandHandlers.cs) command handler.
 Notice that it works with a different aggregate root; [DebitAccount](./Source/Banking/Domain/Accounts/DebitAccount.cs);
 singular. This aggregate will be responsible for all things important to an account, and governs
 all the rules for a single debit account.
