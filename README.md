@@ -10,11 +10,13 @@ The application consists of 2 microservices; Banking and Glance. They are config
 **Banking**
 
 Backend: http://localhost:5000
+
 Frontend: http://localhost:8080
 
 **Glance**
 
 Backend: http://localhost:5001
+
 Frontend: http://localhost:8081
 
 ### MongoDB
