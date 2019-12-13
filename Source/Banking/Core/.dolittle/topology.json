@@ -4,6 +4,10 @@
     "999923ff-659b-4598-a04f-cfb7b9a1c1f5": {
       "name": "Accounts",
       "subFeatures": {}
+    },
+    "75c43438-7c6d-4622-a576-58815eec7b24": {
+      "name": "TestData",
+      "subFeatures": {}
     }
   }
 }

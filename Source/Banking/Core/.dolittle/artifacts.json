@@ -82,5 +82,17 @@
         "type": "Read.Accounts.TransactionsForAccount, Read"
       }
     }
+  },
+  "75c43438-7c6d-4622-a576-58815eec7b24": {
+    "commands": {
+      "38c1b02f-3566-485a-a288-2df90ce635ec": {
+        "generation": 1,
+        "type": "Domain.TestData.AddTestData, Domain"
+      }
+    },
+    "events": {},
+    "eventSources": {},
+    "readModels": {},
+    "queries": {}
   }
 }
