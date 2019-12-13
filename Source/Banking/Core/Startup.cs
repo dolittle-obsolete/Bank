@@ -41,8 +41,9 @@ namespace Core
                 app.UseDolittleSwagger();
             }
 
-            app.UseMvc();
             app.UseDolittle();
+            app.UseMiddleware<ExecutionContextMiddleware>();
+            app.UseMvc();
         }
     }
 }
