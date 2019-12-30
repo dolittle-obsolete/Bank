@@ -53,7 +53,6 @@
     <PackageReference Include="Dolittle.DependencyInversion.Autofac" Version="4.*" />
     <PackageReference Include="Dolittle.ReadModels.MongoDB" Version="4.*" />
     <PackageReference Include="Dolittle.Runtime.Events.MongoDB" Version="4.*" />
-    <PackageReference Include="Dolittle.Runtime.Events.EventStore" Version="1.*" />
 
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.2.0" />
   </ItemGroup>
