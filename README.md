@@ -3,6 +3,35 @@
 This sample shows a simple bank sample and how you could build it using
 Dolittle. Documentation for Dolittle can be found [here](https://dolittle.io).
 
+## Prerequisites
+
+This sample uses [.NET Core](https://dotnet.microsoft.com) and [NodeJS](https://nodejs.org/en/).
+Specifically, the sample requires the 2.2 version of the .NET components. An upgrade in Dolittle
+is underway to support the latest version of 3.1 for all.
+
+To see if you have the correct runtime installed, you should do the following from a terminal:
+
+```shell
+$ dotnet --list-runtimes
+````
+
+It should show a list similar to the following:
+
+```shell
+Microsoft.AspNetCore.All 2.2.8 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
+Microsoft.AspNetCore.App 2.2.8 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
+Microsoft.AspNetCore.App 3.0.1 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
+Microsoft.AspNetCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.App]
+Microsoft.NETCore.App 2.1.14 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+Microsoft.NETCore.App 2.2.8 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+Microsoft.NETCore.App 3.0.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.App]
+```
+
+If it does not have a Microsoft.AspNetCore.All/App or a NETCore.App og 2.2.x, you should go and
+download and install it from [here](https://dotnet.microsoft.com/download/dotnet-core/2.2).
+This will not replace your 3.x tooling, but install the missing runtime components.
+
 ## Application
 
 The application consists of 2 microservices; Banking and Glance. They are configured as follows:
