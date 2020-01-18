@@ -1,0 +1,41 @@
+// Copyright (c) Dolittle. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
+@import '~DolittleStyles/Settings/all.scss';
+@import '~DolittleStyles/Tools/all.scss';
+
+$acrylic-bg-image: url('https://picsum.photos/2000/1500');
+
+body {
+  background: $acrylic-bg-image fixed center;
+  background-size: cover;
+}
+
+main.main-body {
+  @include media-bp-max(tablet) {
+    .command-bar .footprint {
+      // padding-left: $navigation-view-width-compact;
+    }
+  }
+  &.navigation-left-compact {
+    padding-left: $navigation-view-width-compact;
+  }
+  @include media-bp-min(tablet) {
+    &.navigation-left {
+      padding-left: $navigation-view-width-expanded;
+    }
+
+    &.navigation-left-minimal {
+    }
+    &.navigation-top {
+    }
+  }
+
+  > .content {
+    padding: $grid-gutter;
+    display: grid;
+    gap: $grid-gutter;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+  }
+}

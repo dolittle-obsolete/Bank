@@ -1,0 +1,42 @@
+<!-- Copyright (c) Dolittle.  All Rights Reserved.  Licensed under the MIT License. See LICENSE file in the project root for full license information. -->
+<template>
+    <require from="./index.scss"></require>
+    <main class="main-body navigation-left-compact">
+        <navigation-view pane-display-mode="left-compact">
+            <banner>
+                Dolittle Bank
+            </banner>
+            <navigation-header>
+                Some header content
+            </navigation-header>
+            <navigation-items>
+                <navigation-view-item>Link item</navigation-view-item>
+            </navigation-items>
+            <footer-items>
+                <navigation-view-item>Footer link item</navigation-view-item>
+            </footer-items>
+        </navigation-view>
+
+        <command-bar command-location="right" command-label-position="bottom" z-index="100">
+            <content-block>
+                <em>Dolittle Banking Sample: Glance</em>
+            </content-block>
+            <primary-commands>
+                <command-bar-button label="Ham" icon-url="/assets/icons/book.svg"></command-bar-button>
+                <command-bar-button label="Cheese" icon-url="/assets/icons/console.svg"></command-bar-button>
+                <command-bar-button label="Bacon" icon-url="/assets/icons/core.svg"></command-bar-button>
+            </primary-commands>
+            <secondary-commands>
+                <command-bar-button label="Sauce" icon-url="/assets/icons/layers.svg"></command-bar-button>
+                <command-bar-button label="Spices" icon-url="/assets/icons/version.svg"></command-bar-button>
+            </secondary-commands>
+        </command-bar>
+
+        <section class="content">
+            <acrylic-card width="55">
+                Hello world
+            </acrylic-card>
+        </section>
+
+    </main>
+</template>

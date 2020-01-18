@@ -5,8 +5,13 @@ Dolittle. Documentation for Dolittle can be found [here](https://dolittle.io).
 
 ## Prerequisites
 
-This sample uses [.NET Core](https://dotnet.microsoft.com) and [NodeJS](https://nodejs.org/en/).
-Specifically, the sample requires the 2.2 version of the .NET components. An upgrade in Dolittle
+You need to have the following installed:
+
+* [.NET Core](https://dotnet.microsoft.com)
+* [NodeJS](https://nodejs.org/en/)
+* [Yarn](https://yarnpkg.com/en/)
+
+The sample requires the 2.2 version of the .NET components. An upgrade in Dolittle
 is underway to support the latest version of 3.1 for all.
 
 To see if you have the correct runtime installed, you should do the following from a terminal:
@@ -31,6 +36,8 @@ Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 If it does not have a Microsoft.AspNetCore.All/App or a NETCore.App og 2.2.x, you should go and
 download and install it from [here](https://dotnet.microsoft.com/download/dotnet-core/2.2).
 This will not replace your 3.x tooling, but install the missing runtime components.
+
+> __Note__: There are currently some issues with dependencies while using `npm`. So for the time being, please use `yarn` instead [see here](https://yarnpkg.com/en/).
 
 ## Application
 
@@ -64,8 +71,8 @@ This sample utilizes MongoDB as an event store as well.
 Run them accordingly using multiple shell windows:
 
 - `dotnet run` in the `Core` folder of both - this will run the backends
-- `yarn` / `npm install` in the `Web` folder
-- `yarn start` / `npm start` in the `Web` folder
+- `yarn` in the `Web` folder
+- `yarn start` in the `Web` folder
 
 The frontend projects are leveraging the [WebPack DevServer](https://webpack.js.org/configuration/dev-server/)
 and utilizes its proxy capabilities for the necessary routes to the backend without having to

@@ -1,18 +1,21 @@
-/*---------------------------------------------------------------------------------------------
- *  Copyright (c) Dolittle. All rights reserved.
- *  Licensed under the MIT License. See LICENSE in the project root for license information.
- *--------------------------------------------------------------------------------------------*/
+// Copyright (c) Dolittle. All rights reserved.
+// Licensed under the MIT license. See LICENSE file in the project root for full license information.
+
 import { Aurelia } from 'aurelia-framework';
-import environment from './environment';
 import { PLATFORM } from 'aurelia-pal';
 import 'aurelia-polyfills';
+import environment from './environment';
+
+// tslint:disable-next-line: no-var-requires
 require('../Styles/style.scss');
 
 export function configure(aurelia: Aurelia) {
     aurelia.use.standardConfiguration();
 
     if (environment.debug) {
-        aurelia.use.developmentLogging();
+        aurelia.use
+            .developmentLogging()
+            .plugin(PLATFORM.moduleName('@dolittle/components.aurelia'));
     }
 
     aurelia.start().then(() => aurelia.setRoot(PLATFORM.moduleName('App')));

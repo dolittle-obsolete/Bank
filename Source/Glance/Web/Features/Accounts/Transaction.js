@@ -4,17 +4,16 @@
  *--------------------------------------------------------------------------------------------*/
 import { ReadModel } from  '@dolittle/readmodels';
 
-export class Account extends ReadModel
+export class Transaction extends ReadModel
 {
     constructor() {
         super();
         this.artifact = {
-           id: '87344b03-93a2-4ea8-b2bf-deb2250b3f9b',
+           id: '1f00a16e-3f28-4b7f-b7af-821a2864cae1',
            generation: '1'
         };
-        this.id = '00000000-0000-0000-0000-000000000000';
-        this.customerId = '00000000-0000-0000-0000-000000000000';
-        this.type = 0;
-        this.balance = 0;
+        this.reason = 0;
+        this.amount = 0;
+        this.occurred = new Date();
     }
 }
