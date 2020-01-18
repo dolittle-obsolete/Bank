@@ -1,24 +1,18 @@
 const path = require('path');
 require('dotenv').config();
 
-process.env.DOLITTLE_WEBPACK_ROOT = path.resolve('../Core');
-process.env.DOLITTLE_WEBPACK_OUT = path.resolve('../Core/wwwroot');
-process.env.DOLITTLE_FEATURES_DIR = path.resolve('./Features');
-process.env.DOLITTLE_COMPONENT_DIR = path.resolve('./Components');
-
-const config = require('@dolittle/build.aurelia/webpack.config.js');
+const webpack = require('@dolittle/typescript.webpack.aurelia').webpack
+const originalConfig = webpack(__dirname);
 
 module.exports = () => {
-  const obj = config.apply(null, arguments);
-  obj.devServer = {
-    historyApiFallback: true,
-    port: 8081,
-    proxy: {
-      '/api': 'http://localhost:5001'
-    }
-  };
-  obj.resolve.alias = {
-    DolittleStyles: path.resolve(__dirname, './styles')
-  };
-  return obj;
+    const config = originalConfig.apply(null, arguments);
+    config.devServer = {
+        historyApiFallback: true,
+        port: 8081,
+        proxy: {
+          '/api': 'http://localhost:5001',
+          '/swagger': 'http://localhost:5001'
+        }
+      };
+    return config;    
 };

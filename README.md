@@ -67,6 +67,13 @@ Run them accordingly using multiple shell windows:
 - `yarn` / `npm install` in the `Web` folder
 - `yarn start` / `npm start` in the `Web` folder
 
+The frontend projects are leveraging the [WebPack DevServer](https://webpack.js.org/configuration/dev-server/)
+and utilizes its proxy capabilities for the necessary routes to the backend without having to
+leave the same origin. The path `/api` and `/swagger` is proxied and will go to the backend.
+So for it to do commands and queries, it can do so without changing origin.
+
+This means that you can access the **swagger** interface even through the frontends.
+
 ### Trying things out
 
 The solution is a simple banking experience and to get started with the bank, we want to
@@ -75,7 +82,7 @@ backend code.
 
 Both microservices are configured with the [Dolittle Swagger debugging/development helper](https://dolittle.io/interaction/aspnetcore/aspnetcore-debugging-swagger/).
 
-Navigate to `http://localhost:5000/swagger`.
+Navigate to `http://localhost:5000/swagger` (Or `http://localhost:8080/swagger` if you want to go through the frontend).
 
 #### Opening a debit account
 

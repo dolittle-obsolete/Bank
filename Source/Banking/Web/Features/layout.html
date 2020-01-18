@@ -1,6 +1,12 @@
+<!--
+*----------------------------------------------------------------------------------------------
+*  Copyright (c) Dolittle. All rights reserved.
+*  Licensed under the MIT License. See LICENSE in the project root for license information.
+*----------------------------------------------------------------------------------------------
+-->
 <template>
     <require from="./layout.scss"></require>
-    <main class="${router.currentInstruction.config.settings.cssClass ? router.currentInstruction.config.settings.cssClass : 'narrow-column'} default_layout">
+    <main class="default_layout">
         <slot></slot>
     </main>
 </template>

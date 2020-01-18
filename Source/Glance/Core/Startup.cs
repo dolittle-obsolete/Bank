@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Swashbuckle.AspNetCore.Swagger;
 
 namespace Core
 {
@@ -25,12 +24,11 @@ namespace Core
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            
+
             services.AddDolittleSwagger();
 
             _bootResult = services.AddDolittle(_loggerFactory);
         }
-
 
         public void ConfigureContainer(ContainerBuilder containerBuilder)
         {
@@ -45,15 +43,9 @@ namespace Core
                 app.UseDolittleSwagger();
             }
 
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
-
             app.UseMvc();
 
-
             app.UseDolittle();
-            app.RunAsSinglePageApplication();
         }
-
     }
 }
