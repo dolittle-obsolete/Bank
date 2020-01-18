@@ -10,12 +10,12 @@ import environment from './environment';
 require('../Styles/style.scss');
 
 export function configure(aurelia: Aurelia) {
-    aurelia.use.standardConfiguration();
+    aurelia.use
+        .standardConfiguration()
+        .plugin(PLATFORM.moduleName('@dolittle/components.aurelia'));
 
     if (environment.debug) {
-        aurelia.use
-            .developmentLogging()
-            .plugin(PLATFORM.moduleName('@dolittle/components.aurelia'));
+        aurelia.use.developmentLogging();
     }
 
     aurelia.start().then(() => aurelia.setRoot(PLATFORM.moduleName('App')));
