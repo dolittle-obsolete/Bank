@@ -45,7 +45,6 @@
 
     <PackageReference Include="Dolittle.SDK" Version="4.*" />
 
-    <PackageReference Include="Dolittle.Build" Version="4.*" />
     <PackageReference Include="Dolittle.Build.MSBuild" Version="4.*" />
     <PackageReference Include="Dolittle.SDK.Build" Version="4.*" />
 
