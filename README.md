@@ -66,6 +66,8 @@ $ docker run -d -p 27017:27017 mongo:4.0.13
 
 This sample utilizes MongoDB as an event store as well.
 
+> __Note__: Due to the introduction of a breaking change in MongoDB that Dolittle was relying on, we are very specific on the version for now till we have implemented a fix.
+
 ### Starting the Microservices
 
 Run them accordingly using multiple shell windows:
