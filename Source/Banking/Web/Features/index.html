@@ -1,6 +1,7 @@
 <!-- Copyright (c) Dolittle.  All Rights Reserved.  Licensed under the MIT License. See LICENSE file in the project root for full license information. -->
 <template>
     <require from="./index.scss"></require>
+
     <main class="main-body navigation-left-compact">
         <navigation-view pane-display-mode="left-compact">
             <banner>
@@ -34,7 +35,37 @@
 
         <section class="content">
             <acrylic-card width="55">
-                Hello world
+                <text-field label="Validation Context" value.bind="validationContext.isValid"></text-field>
+
+                <input type="text" value.bind="something">
+                <input type="text" value.bind="timed">
+                <input type="text" value.bind="filtered">
+                <input type="text" value.bind="counter">
+                <input type="text" value.bind="nested.command.from">
+
+                <div visibility.bind="nested.command.from & isinvalid">
+                    The Guid is invalid
+                </div>
+
+                <div visibility.bind="nested.command.from & isvalid">
+                    The Guid is valid
+                </div>
+
+
+                <input type="text" value.bind="observable">
+                <input type="text" value.bind="isValid">
+
+                <div validation-messages.for="validationMessage of nested.command">
+                    <div>Validation message</div>
+                </div>
+
+                <div repeat.for="item of regularArray">
+                    <div>${item}</div>
+                </div>
+
+                <div repeat.for="item of observableArray">
+                    <div>${item}</div>
+                </div>
             </acrylic-card>
         </section>
 

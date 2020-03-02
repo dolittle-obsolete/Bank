@@ -1,8 +1,12 @@
 {
     "extends": "@dolittle/typescript.build/TSConfig/tslint.json",
     "linterOptions": {
-      "exclude": [
-        "**/*.js"
-      ]
+        "rules": {
+            "arrow-parens": false
+
+        },
+        "exclude": [
+            "**/*.js"
+        ]
     }
 }
